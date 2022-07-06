@@ -1,5 +1,5 @@
 const { ethers } = require("hardhat");
-const { DAO_ADDRESS, TREASURY_ADDRESS } = require("./helper.js");
+const { DAO_ADDRESS, TREASURY_ADDRESS } = require("./addresses.js");
 
 async function main() {
     const [owner] = await ethers.getSigners();

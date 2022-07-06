@@ -13,7 +13,7 @@ async function main() {
     const treasury = await Treasury.attach(TREASURY_ADDRESS);
     
     // Create a proposal to send 1 ether from the treasury to an address.
-    const proposalTxn = await dao.connect(addr1).propose(
+    const proposalTxn = await multiTokenDAO.propose(
         [TREASURY_ADDRESS],
         [0],
         [await treasury.interface.encodeFunctionData("sendEther", [owner.address, ethers.utils.parseUnits("1", 18)])],

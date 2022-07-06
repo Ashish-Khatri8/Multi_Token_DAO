@@ -9,7 +9,7 @@ async function main() {
     const erc20VotingToken = await ERC20VotingToken.attach(ERC20_TOKEN_ADDRESS);
 
     // Minting 20 tokens to each address.
-    const amount = ethers.utils.parseUnits("20", 18);
+    const amount = ethers.utils.parseUnits("20");
 
     // Mint the ERC20 voting tokens to other addresses.
     await erc20VotingToken.mint(owner.address, amount);

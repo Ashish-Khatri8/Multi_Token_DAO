@@ -13,6 +13,13 @@ contract ERC20VotingToken is ERC20, ERC20Votes, Ownable {
     /// @dev Calls parent contract's constructors with required arguments.
     constructor() ERC20("ERC20VotingToken", "ERC20VT") ERC20Permit("ERC20VotingToken") {}
 
+    
+    /// @dev Overrides decimals() function so that token has 0 decimals.
+    function decimals() public pure override returns(uint8) {
+        return 0;
+    }
+
+
     /**
      * @notice Function to mint tokens to an address by the owner.
      * @dev Mints given amount of tokens to the specified address. Can only be called by the owner.

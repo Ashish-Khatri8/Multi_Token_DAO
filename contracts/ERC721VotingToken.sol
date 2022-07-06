@@ -15,7 +15,7 @@ contract ERC721VotingToken is Ownable, ERC721URIStorage, EIP712, ERC721Votes {
     /// @dev Keeps track of last tokenId minted.
     uint256 _tokenId;
 
-    constructor() ERC721("VotingNFT", "VNT") ERC721Votes() EIP712("VotingNFT", "1") {}
+    constructor() ERC721("ERC721VotingToken", "ERC721VT") ERC721Votes() EIP712("ERC721VotingToken", "1") {}
 
     /**
      * @notice Function to mint ERC721 token to an address, with given metadataURI. Callable only by owner.

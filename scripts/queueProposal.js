@@ -13,7 +13,7 @@ async function main() {
 
     // Check proposal state before queueing.
     // 1-> voting active, 2-> Canceled, 3-> Defeated, 4-> Succeeded
-    console.log("Proposal state before queueing: ", await dao.state(PROPOSAL_ID));
+    console.log("Proposal state before queueing: ", await multiTokenDAO.state(PROPOSAL_ID));
 
     // Now, queue the proposal.
     const queueTxn = await multiTokenDAO.queue(

@@ -1,5 +1,5 @@
 const { ethers } = require("hardhat");
-const { ERC20_TOKEN_ADDRESS } = require("./helper.js");
+const { ERC20_TOKEN_ADDRESS } = require("./addresses.js");
 
 async function main() {
     const [owner, addr1, addr2, addr3, addr4, addr5] = await ethers.getSigners();
